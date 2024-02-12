@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+    <style>
+    
+    </style>
+  </head>
+  <body> 
+    <button onclick = "
+    cartQuantity = updateCartQuantity('Show Quantity');
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+    Show Quantity
+    </button>
+
+    <button onclick=" 
+    cartQuantity = updateCartQuantity('Add to Cart');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Add to Cart
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('+2');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+2
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('+3');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+3
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('+4');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+4
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('+5');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+5
+    </button>
+      
+    <button onclick="
+    cartQuantity = updateCartQuantity('Remove from cart');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Remove from cart
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('-2');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">-2
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('-3');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">-3
+    </button>
+
+    <button onclick="
+    cartQuantity = updateCartQuantity('Reset Cart');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Reset Cart
+    </button>
+    
+    <p class="show-quantity"></p>
+    <script>
+      let cartQuantity = 0;
+      document.querySelector('.show-quantity')
+        .innerHTML = `Cart Quantity: ${cartQuantity}`
+      function updateCartQuantity(button){
+        // let cartQuantity = 0;
+        const maxQuantity = 10;
+        if (button === 'Add to Cart'){
+          if (cartQuantity < maxQuantity){
+            cartQuantity ++;
+          } else {
+            console.log('The cart is full')
+          }
+
+        } else if (button === '+2'){
+          if (cartQuantity < maxQuantity){
+            cartQuantity += 2;
+          } else {
+            console.log('The cart is full')
+          }
+
+        } else if (button === '+3'){
+            if (cartQuantity < maxQuantity){
+              cartQuantity += 3;
+            } else {
+              console.log('The cart is full')
+            }   
+
+        } else if (button === '+4'){
+            if (cartQuantity < maxQuantity){
+              cartQuantity += 4;
+            } else {
+              console.log('The cart is full')
+            }   
+
+        } else if (button === '+5'){
+            if (cartQuantity < maxQuantity){
+              cartQuantity += 5;
+            } else {
+              console.log('The cart is full')
+            }  
+
+        } else if (button === '-2'){
+            if (cartQuantity <= 0){
+              console.log('Not enough items in the cart');
+            } else {
+              cartQuantity -= 2;
+            }  
+
+        } else if (button === '-3'){
+            if (cartQuantity <= 0){
+              console.log('Not enough items in the cart');
+            } else {
+              cartQuantity -= 3;
+            }  
+
+        } else if (button === 'Remove from cart'){
+            if (cartQuantity <= 0){
+              console.log('Not enough items in the cart');
+            } else {
+              cartQuantity -= 1;
+            }  
+
+        } else if (button === 'Reset Cart') {
+            cartQuantity = 0;
+            console.log('Cart was reset');         
+        }
+
+        document.querySelector('.show-quantity')
+          .innerHTML = `Cart Quantity: ${cartQuantity}`;
+        return cartQuantity
+      }
+    </script>
+  </body>
+</html>

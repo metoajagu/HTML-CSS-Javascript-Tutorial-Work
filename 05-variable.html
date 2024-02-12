@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+    <style>
+    
+    </style>
+  </head>
+  <body> 
+    <script>
+      let variable1 = 3;
+      console.log(variable1);
+
+      const calculation = 4 + 3;
+      console.log(calculation);
+      console.log(calculation + 2);
+
+      const result = calculation + 2
+      console.log(result);
+
+      const message = 'hello';
+      console.log(message); console.log(';');
+
+      variable1 = 5;
+      console.log(variable1);
+
+      variable1 = variable1 + 1;
+      console.log(variable1);
+
+      // 'const' creates a variable that can't be change
+      const variable2 = 3;
+      
+      // 'var' creates variables that can be changed like 'let'
+      var variable3 = 3;
+
+      // 'typeof' gets the type of element
+      console.log(typeof variable2);
+      console.log(typeof message);
+
+
+      var name = 'Meto';
+      console.log(`My name is ${name}`);
+
+      var coffee = 5;
+      var bagel = 3
+      var soup = 9
+      const cost = coffee + (2 * bagel) + soup;
+      const tax = cost * 0.1;
+      const totalCost = cost + tax;
+
+      console.log(`Cost of food: $${cost}`);
+      console.log(`Tax(10%): $${tax}`);
+      console.log(`Total Cost: $${totalCost}`);
+    </script>
+  </body>
+</html>
+
+

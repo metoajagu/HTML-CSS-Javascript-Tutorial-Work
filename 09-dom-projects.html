@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+
+  </head>
+  <body> 
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+      subscribe();
+    " class = "js-subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" 
+    class = "js-cost-input" onkeydown="
+    handleCostKeyDown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+
+
+    <!-- Lesson 9 Practice -->
+    <button class = "js-9a-button">9a</button>
+    <button class = "js-9b-button">9b</button>
+
+    <p class ="js-total-cost"></p>
+
+    <button onclick="
+      headsOrTails('heads');
+    ">heads</button>
+
+    <button onclick="
+      headsOrTails('tails');
+    ">tails</button>
+    <p class = "js-choice"></p>
+
+    <input placeholder= "Name" class = "name-input" onkeydown="
+      enterName(event);
+    ">
+    <button onclick="
+      displayName();
+    ">Submit</button>
+    <p class ="display-name"></p>
+
+    <input placeholder="Type something" class = "js-input" onkeyup="
+      typedWords(event);
+    ">
+    <p class="words-typed"></p>
+    <script>
+      
+
+      // Window object represents the browser and calling document from window is the same thing as just calling document
+      // window.document
+      // window.console.log('window');
+
+      function handleCostKeyDown(event){
+          if (event.key === 'Enter'){
+          calculateTotal();
+          }
+      }
+      function calculateTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+        
+        // the querySelector turns number it retrieves into a string so you can use the Number() in JavaScript to turn the string into a Number
+        let cost = Math.round(Number(inputElement.value));
+        
+        if (cost < 40){
+          cost += 10;
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost}`;
+      }
+
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if (buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+
+      // Lesson 9 [Practice Problems]:
+      const buttonValue = document.querySelector('.js-9a-button');
+        
+        console.log(buttonValue);
+
+      let button2Value = document.querySelector('.js-9b-button');
+
+      button2Value.innerHTML = '9b done!';
+
+      console.log(button2Value);
+
+      function headsOrTails(choice){
+        if(choice === 'heads'){
+          document.querySelector('.js-choice')
+            .innerHTML = 'You chose heads!';
+        } else if (choice === 'tails'){
+          document.querySelector('.js-choice')
+            .innerHTML = 'You chose tails!';
+        }
+      }
+
+      function displayName(){
+        let name = document.querySelector('.name-input');
+        document.querySelector('.display-name')
+          .innerHTML = `Your name is: ${name.value}`;
+      }
+
+      function enterName(event){
+        if (event.key === 'Enter'){
+          displayName();
+        }
+      } 
+
+      function typedWords(event){
+        let typed = document.querySelector('.js-input').value;
+
+        if (event.key){
+          document.querySelector('.words-typed').innerHTML = typed;
+        }
+
+      }      
+    </script>
+  </body>
+</html>
+
+

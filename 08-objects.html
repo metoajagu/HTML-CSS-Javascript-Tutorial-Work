@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+
+  </head>
+  <body> 
+    <script>
+      /*
+    // This is how you create an object
+    // Code on left is the propert name, code on right is the value name
+
+    // Objects allow you to group and use multiple values together
+    const product = {
+      name: 'socks',
+      price: 1090
+    };
+    
+    // This is how you can access specifc properties set in a object [Dot Notation]
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+
+    // How to change properties in an object
+    product.name = 'cotton socks';
+    console.log(product);
+
+    // How to add new properties in an object
+    product.newProperty = true;
+    console.log(product);
+
+    // How to delete properties in an object
+    delete product.newProperty;
+    console.log(product);
+
+    */
+
+    /*
+    const product2 = {
+      name : 'shirt',
+      'delivery-time': '1 day',
+      rating: {
+        stars: 4.5, 
+        count: 87
+      },
+      fun: function function1(){
+        console.log('Function inside object');
+      }
+    };
+
+    console.log(product2);
+    console.log(product2.name);
+
+    // You can use bracket notation to access values in an object. Allows you to access properties don't exist
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+    console.log(product2['rating']);
+
+    // You can access objects inside other objects
+    console.log(product2.rating);
+
+    // You can also call functions inside of other objects
+    product2.fun();
+    // Console and Math are built in objects that have functions and variables that are already in Javascript
+    console.log(typeof console.log);
+
+    // Other Build Objects:
+    // JSON [Javascript Object Notation]
+    // Syntax similar to Javascript object notation but JSON uses double quotes.
+    // Used to send data between computers or to store data
+
+    // JSON: Helps convert Javascript object ot JSON
+
+    // String method found in JSON object that turns Javascript objects into JSON
+    console.log(JSON.stringify(product2));
+
+    // Turning a JSON object back into JavaScript object
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+    */
+    /*
+    // More built in methods of string and other objects
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const object1 = {
+      message: 'hello'
+    };
+
+    // Makes a copy of the reference to object1
+    const object2 = object1;
+
+    // Even though object1 is a const you can still change values inside of the object
+    object1.message = 'good job';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'Good job'      
+    }
+
+    // Two different objects can't be the equal to each other because they have different references
+    console.log(object3 === object1);
+    
+    // Since object2 is equal to object1, they have the same reference so they are the same
+    console.log(object1 === object2);
+
+    const object4 = {
+      message: 'Good job',
+      price: 799    
+    }     
+
+    // When variable names have the same name as the value name this is a short cut
+    const{ message, price} = object4
+    console.log(message);
+    console.log(price);
+
+    // Takes whatever is in the message variable stored above and puts it into the object5 message value
+    const object5 = {
+      // message: message
+      message,
+      // method: function function1(){
+      //   console.log('method');
+      // }
+      method(){
+        console.log('method');
+      }
+    };
+    console.log(object5); 
+    object5.method();
+    */
+    // Lesson 8 Exercise Problems:
+
+    const product3 = {
+      name: 'Basketball',
+      price: 2095
+    };
+    console.log(product3);
+
+    product3.price += 500;
+    console.log(product3);
+
+    product3['delivery-time'] = '3 days';
+    console.log(product3);
+
+    product4 = {
+      name: 'Towel',
+      price: 200
+    }
+    function comparePrice(product1, product2){
+      if (product1.price < product2.price){
+        return product1.price;
+      } else {
+        return product2.price;
+      }
+    };
+
+    console.log(comparePrice(product3, product4));
+
+    function isSameProduct(product1, product2){
+      if (product1.name === product2.name &&
+      product1.price === product2.price){
+        return true;
+      } else{
+        return false;
+      }
+    }
+
+    console.log(isSameProduct(product3, product4));
+
+    console.log('Good, Morning'.toLowerCase());
+    console.log('test'.repeat(2))
+   </script>
+  </body>
+</html>
+
+
