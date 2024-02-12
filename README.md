@@ -75,8 +75,7 @@ https://github.com/metoajagu/HTML-CSS-Javascript-Tutorial-Work/assets/157914585/
 **Description:** This project is a quick To-Do list that focused on understanding arrays and setting/using JavaScript Objects
 
 
-https://github.com/metoajagu/HTML-CSS-Javascript-Tutorial-Work/assets/157914585/325d07f6-7e18-4876-811d-fbe23e6d44df
-
+https://github.com/metoajagu/HTML-CSS-Javascript-Tutorial-Work/assets/157914585/90dedeac-e2f4-4199-92c3-c854b2fb6545
 
 
 **Lessons/Takeaways:**
